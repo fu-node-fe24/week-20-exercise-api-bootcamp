@@ -31,6 +31,12 @@ Method: `GET`
 
 ---
 
+URL: `/api/todo/:id` - Hämta en specifik todo
+
+Method: `GET`
+
+---
+
 URL: `/api/todo` - Lägg till en ny todo
 
 Method: `POST`
@@ -53,6 +59,10 @@ Method: `DELETE`
 
 #### Level up 1
 
+I GET-anropet som hämtar alla todos kan användaren även lägga till en queryparametern ```?done=true``` eller ```?done=false```, och då skall anropet returnera de todos som matchar användarens sökning.
+
+#### Level up 2
+
 Lägg till en egenskap på varje nyskapad Todo Items som är när den skapades och när den uppdaterades. `createdAt`, och `updatedAt` läggs till på servern alltså skickas inte med i body från Insomnia. Tips! Använde date-objektet https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
 ```js
@@ -64,9 +74,9 @@ Lägg till en egenskap på varje nyskapad Todo Items som är när den skapades o
 }
 ```
 
-#### Level up 2
+#### Level up 3
 
-Lägg på _pagination_ på routen som hämtar alla Todos.
+Lägg även på _pagination_ på routen som hämtar alla Todos.
 
 **Exempel**
 
